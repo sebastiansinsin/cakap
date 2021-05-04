@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="title">Github Profile</div>
+    <div class="content">
+        <div class="left-content">
+            <img class="avatar-content" src="{{userData.avatar_url}}" width="260" height="260">
+            <div class="navigation-content">
+                <div>
+                    <button mat-button-raised color="primary" data-cy="user-repository-btn" routerLink="/user-repositories">My Repository</button>
+                </div>
+                <div>
+                    <button mat-button-raised color="primary" data-cy="back-btn" routerLink="/find-users">Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="head-content">
+                <div>public repos: {{userData.public_repos}}</div>
+                <div>following: {{userData.following}}</div>
+                <div>followers: {{userData.followers}}</div>
+            </div>
+            <div>username: {{userData.login}}</div>
+            <div>name: {{userData.name}}</div>
+            <div class="text-box">{{userData.bio}}</div>
+            <div>location: {{userData.location}}</div>
+            <div>email: {{userData.email}}</div>
+            <div>twitter: {{userData.twitter_username}}</div>
+            <div>company: {{userData.company}}</div>
+            <div>hireable : {{userData.hireable ? 'Yes' : 'No'}}</div>
+        </div>
+    </div>
+
+</div>

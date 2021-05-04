@@ -1,0 +1,11 @@
+<div class="container">
+    <form class="form-container">
+        <mat-form-field class="form-field" floatLabel="always">
+            <mat-label>Input your github username</mat-label>
+            <input data-cy="input-username" required matInput placeholder="john, Sebastian,etc" [(ngModel)]="userName" name="userName">
+        </mat-form-field>
+        <div class="submit-button">
+            <button data-cy="search-user-btn" mat-button-raised color="primary" (click)="search_user(userName)">Submit</button>
+        </div>
+    </form>
+</div>
