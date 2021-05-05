@@ -1,0 +1,56 @@
+.container {
+  display: block !important;
+  padding: 20px;
+}
+.container .top-nav {
+  position: relative;
+  overflow: hidden;
+}
+.container .top-nav .title {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .content {
+  margin-top: 2em;
+}
+.container .content .item {
+  border: 1px solid #000;
+}
+.container .content .item .item-header, .container .content .item item-content {
+  display: flex !important;
+  padding: 20px;
+}
+.container .content .item .item-header .left-header, .container .content .item .item-header left-content, .container .content .item item-content .left-header, .container .content .item item-content left-content {
+  display: flex !important;
+  width: 50%;
+}
+.container .content .item .item-header .left-header .repos-name, .container .content .item .item-header left-content .repos-name, .container .content .item item-content .left-header .repos-name, .container .content .item item-content left-content .repos-name {
+  display: flex !important;
+  margin-left: 20px;
+}
+.container .content .item .item-header .left-header .avatar-container, .container .content .item .item-header left-content .avatar-container, .container .content .item item-content .left-header .avatar-container, .container .content .item item-content left-content .avatar-container {
+  width: 40px;
+  display: flex !important;
+}
+.container .content .item .item-header .left-header .avatar-container .avatar-content, .container .content .item .item-header left-content .avatar-container .avatar-content, .container .content .item item-content .left-header .avatar-container .avatar-content, .container .content .item item-content left-content .avatar-container .avatar-content {
+  border-radius: 50%;
+  border: 1px solid #000;
+  align-self: center;
+  max-width: 100%;
+  height: auto;
+}
+.container .content .item .item-header .right-header, .container .content .item .item-header right-content, .container .content .item item-content .right-header, .container .content .item item-content right-content {
+  display: flex !important;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.container .content .item .item-header .right-header div, .container .content .item .item-header right-content div, .container .content .item item-content .right-header div, .container .content .item item-content right-content div {
+  margin-right: 10px;
+}
+.container .content .item .solid {
+  border: 1px solid #000;
+}

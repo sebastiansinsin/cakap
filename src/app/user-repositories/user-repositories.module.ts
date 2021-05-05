@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { UserRepositoriesRoutingModule } from './user-repositories-routing.module';
 import { UserRepositoriesComponent } from './user-repositories.component';
-import {PaginatorModule} from 'primeng/paginator';
-
+import { PaginatorModule } from 'primeng/paginator';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TooltipModule } from 'primeng/tooltip';
 @NgModule({
   declarations: [
     UserRepositoriesComponent
@@ -12,7 +13,9 @@ import {PaginatorModule} from 'primeng/paginator';
   imports: [
     CommonModule,
     UserRepositoriesRoutingModule,
-    PaginatorModule
+    PaginatorModule,
+    FontAwesomeModule,
+    TooltipModule
   ]
 })
 export class UserRepositoriesModule { }
