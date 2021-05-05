@@ -1,1 +1,54 @@
-<p>user-repositories works!</p>
+<div class="container">
+    <div class="top-nav">
+        <div class="navigation-btn">
+            <button mat-button-raised color="primary" data-cy="user-profile-btn"
+                routerLink="/user-profile">Profile</button>
+        </div>
+        <div class="title">My Repositories</div>
+    </div>
+    <div class="content">
+        <div class="item" *ngFor="let item of repos | slice:first:first+1">
+            <div class="item-header">
+                <div class="left-header">
+                    <div class="avatar-container">
+                        <img class="avatar-content" src="{{item?.owner?.avatar_url}}">
+                    </div>
+                    <div class="repos-name">{{item?.full_name}}</div>
+                </div>
+                <div class="right-header">
+                    <div pTooltip="star count" tooltipPosition="top">
+                        <fa-icon [icon]="faStar"></fa-icon> {{item?.stargazers_count}}
+                    </div>
+                    <div pTooltip="watch count" tooltipPosition="top">
+                        <fa-icon [icon]="faEye"></fa-icon> {{item?.watchers_count}}
+                    </div>
+                    <div pTooltip="fork count" tooltipPosition="top">
+                        <fa-icon [icon]="faCodeBranch"></fa-icon> {{item?.forks_count}}
+                    </div>
+                </div>
+            </div>
+            <hr class="solid">
+            <div class="item-content">
+                <div class="left-content">
+                    <div>Language : {{item?.language}}</div>
+                    <div>Size : {{item?.size}}</div>
+                    <div style="word-break: break-all;">Forking Url : {{item?.forks_url}}</div>
+                    <div>Description : {{item?.description}}</div>
+                </div>
+                <div class="right-content">
+                    <input type="text" value="{{item?.clone_url}}" id="myInput" style="display: none;">
+                    <div class="btn-clone" (click)="clone()">
+                        <div style="margin-right: 0;">Clone or Download</div>
+                        <div class="icon-btn">
+                            <fa-icon [icon]="faArrowDown"></fa-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p-paginator [rows]="1" [totalRecords]="totalRecords" [first]="first" (onPageChange)="paginate($event)"
+            [pageLinkSize]="3">
+        </p-paginator>
+    </div>
+</div>
