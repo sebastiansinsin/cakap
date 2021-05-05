@@ -50,4 +50,14 @@ export class UserRepositoriesComponent implements OnInit {
   }) {
     this.first = event.first;
   }
+
+  clone() {
+    var copyText: any = document.getElementById("myInput");
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("run terminal and git clone " + copyText.value);
+  }
 }

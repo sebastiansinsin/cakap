@@ -36,7 +36,8 @@
                     <div>Description : {{item?.description}}</div>
                 </div>
                 <div class="right-content">
-                    <div class="btn-clone">
+                    <input type="text" value="{{item?.clone_url}}" id="myInput" style="display: none;">
+                    <div class="btn-clone" (click)="clone()">
                         <div style="margin-right: 0;">Clone or Download</div>
                         <div class="icon-btn">
                             <fa-icon [icon]="faArrowDown"></fa-icon>
