@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Deployment with github
+Run `git checkout gh-pages` to checkout the branch for github pages settings.
+after that run `git merge --no-ff origin/main` to merge a changes from main branch
+and then run `ng build --prod --output-path docs`, after build is finished, don't forget to commit and push
